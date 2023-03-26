@@ -3,42 +3,32 @@ import Logo from "./Logo.astro"
 import ThemeToggle from "./ThemeToggle.astro"
 export const prerender = true
 ---
-
-<header class="sticky top--100px z-99 px-2em">
-  <div class="w-100px h-100px logo">
-    <Logo />
-  </div>
-  <div class="flex justify-between items-center py-1">
-    <div
-      class="flex items-center mt-2 pb-2 text-2xl title cursor-pointer"
-      onclick="scrollToTop()"
-    >
-      <span
-        class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r dark:from-yellow-300 from-yellow-600 dark:to-red-700 to-red-700 mr-1"
-        >ChatGPT</span
-      >
-      <span class="ml-1 font-extrabold text-slate-7 dark:text-slate"
-        >Vercel</span
-      >
-      <a
-        class="ml-2 <sm:hidden"
-        href="https://github.com/ourongxing/chatgpt-vercel"
-      >
-        <img
-          alt="GitHub forks badge"
-          src="https://img.shields.io/github/stars/ourongxing/chatgpt-vercel?logo=github"
-        />
-      </a>
-      <a class="ml-2" href="https://github.com/ourongxing/chatgpt-vercel/fork">
-        <img
-          alt="GitHub forks badge"
-          src="https://img.shields.io/github/forks/ourongxing/chatgpt-vercel?logo=github"
-        />
-      </a>
-    </div>
+<header>
+  <div class="flex justify-between items-start">
+    <span class="w-100px h-100px logo">
+      <Logo />
+    </span>
     <ThemeToggle />
   </div>
+  <div class="flex items-center mt-4 text-2xl title">
+    <span
+      class="text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-yellow-300 to-red-700 mr-1"
+      >ChatGPT 365</span
+    >
+    
+  </div>
 </header>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNVNCDER6J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QNVNCDER6J');
+</script>
+
 
 <script is:inline>
   function scrollToTop() {
